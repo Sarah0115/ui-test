@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Sarah0115/ui-test/issues"
   },
-  "homepage": "https://github.com/Sarah0115/ui-test#readme",
+  "homepage": "https://github.com/Sarah0115/ui-test",
   "dependencies": {
     "node-sass": "^7.0.1"
   }
