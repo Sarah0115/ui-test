@@ -15,7 +15,7 @@ section {
     justify-content: space-between;
     h2 {
         font-family: $titlefont;
-        font-size: 45px;
+        font-size: 24px;
         font-weight: 300;
         margin-bottom: 20px;
     }
@@ -249,11 +249,7 @@ section {
     }
 }
 @media screen and (min-width: 768px) {
-    .sectiontitle {
-        select {
-            display: block;
-        }
-    }
+   
     .peoplecard {
         display: grid;
         grid-gap: 20px;
@@ -267,6 +263,7 @@ section {
                 display: flex;
                 align-items: center;
                 width: auto;
+               
             }
         }
         &.list {
@@ -310,6 +307,18 @@ section {
                 }
                 &__final {
                     top: 0;
+                }
+                .card__gausebar {
+                    height: 36px;
+                    .data{
+                        align-items: center;
+                        .label{
+                            font-size: 18px;
+                            img{
+                                width: 15px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -356,6 +365,12 @@ section {
 }
 
 @media screen and (min-width: 1024px) {
+    .sectiontitle {
+        h2{
+            font-size: 45px;
+        }
+
+    }
     .peoplecard {
         &.grid {
             grid-template-columns: 1fr 1fr 1fr;
@@ -365,6 +380,7 @@ section {
         }
         &.list {
             .card {
+                height: 170px;
                 &__content {
                     padding-right: 14px;
                     background: linear-gradient(
@@ -374,6 +390,43 @@ section {
                         #666666 50%,
                         rgba(51, 51, 51, 0.6) 71.88%
                     );
+                    .card__info__name{
+                        font-size: 36px;
+                        &::before{
+                            height: 45px;
+                            width: 45px;
+                            background-size: 50%;
+                        }
+                    }
+                    .card__info__description{
+                        font-size: 18px;
+                        line-height: 22px;
+                        font-weight: 400;
+                    }
+                    .card__vote{
+                        width: 45px;
+                        height: 45px;
+                    }
+                    .card__votesubmit{
+                        height: 45px;
+                        width: 135px;
+                    }
+                    
+                }
+                .card__gausebar {
+                        height: 54px;
+                        .data{
+                            align-items: center;
+                            .label{
+                                font-size: 27px;
+                                img{
+                                    width: 22px;
+                                }
+                            }
+                        }
+                    }
+                &__picture{
+                    min-width: 230px;
                 }
                 &__info {
                     padding: 0 10px;

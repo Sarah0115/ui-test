@@ -6,7 +6,7 @@ section {
   justify-content: space-between; }
   .sectiontitle h2 {
     font-family: "Lato", sans-serif;
-    font-size: 45px;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px; }
   .sectiontitle select {
@@ -199,8 +199,6 @@ section {
         padding: 0 5px; }
 
 @media screen and (min-width: 768px) {
-  .sectiontitle select {
-    display: block; }
   .peoplecard {
     display: grid;
     grid-gap: 20px;
@@ -244,6 +242,14 @@ section {
           font-size: 14px; }
         .peoplecard.list .card__final {
           top: 0; }
+        .peoplecard.list .card .card__gausebar {
+          height: 36px; }
+          .peoplecard.list .card .card__gausebar .data {
+            align-items: center; }
+            .peoplecard.list .card .card__gausebar .data .label {
+              font-size: 18px; }
+              .peoplecard.list .card .card__gausebar .data .label img {
+                width: 15px; }
   .custom-select {
     position: relative;
     font-family: "Lato", sans-serif;
@@ -278,12 +284,42 @@ section {
     z-index: 10; } }
 
 @media screen and (min-width: 1024px) {
+  .sectiontitle h2 {
+    font-size: 45px; }
   .peoplecard.grid {
     grid-template-columns: 1fr 1fr 1fr; }
     .peoplecard.grid .card {
       height: calc(1060px / 3); }
-  .peoplecard.list .card__content {
-    padding-right: 14px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 14.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%); }
-  .peoplecard.list .card__info {
-    padding: 0 10px; } }
+  .peoplecard.list .card {
+    height: 170px; }
+    .peoplecard.list .card__content {
+      padding-right: 14px;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 14.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%); }
+      .peoplecard.list .card__content .card__info__name {
+        font-size: 36px; }
+        .peoplecard.list .card__content .card__info__name::before {
+          height: 45px;
+          width: 45px;
+          background-size: 50%; }
+      .peoplecard.list .card__content .card__info__description {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400; }
+      .peoplecard.list .card__content .card__vote {
+        width: 45px;
+        height: 45px; }
+      .peoplecard.list .card__content .card__votesubmit {
+        height: 45px;
+        width: 135px; }
+    .peoplecard.list .card .card__gausebar {
+      height: 54px; }
+      .peoplecard.list .card .card__gausebar .data {
+        align-items: center; }
+        .peoplecard.list .card .card__gausebar .data .label {
+          font-size: 27px; }
+          .peoplecard.list .card .card__gausebar .data .label img {
+            width: 22px; }
+    .peoplecard.list .card__picture {
+      min-width: 230px; }
+    .peoplecard.list .card__info {
+      padding: 0 10px; } }
