@@ -24,6 +24,13 @@ section {
     background-repeat: no-repeat;
     background-position: calc(100% - 3px) center; }
 
+.container-se {
+  width: 173px;
+  height: 36px; }
+
+.custom-select {
+  display: none; }
+
 .peoplecard {
   display: flex;
   overflow-x: scroll;
@@ -61,7 +68,7 @@ section {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical; }
     .card__info__name::before {
-      content: '';
+      content: "";
       height: 30px;
       width: 30px;
       display: flex;
@@ -74,10 +81,10 @@ section {
       background-position: center; }
     .card__info__name.thumbsup::before {
       background-image: url("../assets/img/thumbs-up.svg");
-      background-color: #3CBBB4; }
+      background-color: #3cbbb4; }
     .card__info__name.thumbsdown::before {
       background-image: url("../assets/img/thumbs-down.svg");
-      background-color: #FBBD4A; }
+      background-color: #fbbd4a; }
   .card__info__description {
     color: white;
     font-size: 15px;
@@ -147,10 +154,10 @@ section {
     margin-right: 10px;
     cursor: pointer; }
     .card__vote.yes {
-      background-color: #3CBBB4;
+      background-color: #3cbbb4;
       background-image: url(/assets/img/thumbs-up.svg); }
     .card__vote.no {
-      background-color: #FBBD4A;
+      background-color: #fbbd4a;
       background-image: url(/assets/img/thumbs-down.svg); }
     .card__vote.active {
       border: 1px solid white; }
@@ -203,7 +210,7 @@ section {
       grid-auto-flow: row; }
       .peoplecard.grid .card {
         margin-right: 0;
-        height: calc((100vw - 50px)/2);
+        height: calc((100vw - 50px) / 2);
         display: flex;
         align-items: center;
         width: auto; }
@@ -236,7 +243,39 @@ section {
         .peoplecard.list .card__description {
           font-size: 14px; }
         .peoplecard.list .card__final {
-          top: 0; } }
+          top: 0; }
+  .custom-select {
+    position: relative;
+    font-family: "Lato", sans-serif;
+    width: 173px;
+    height: 36px;
+    display: block; }
+    .custom-select select,
+    .custom-select .select-hide {
+      display: none; }
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 5px solid black;
+    border-color: #000 transparent transparent transparent; }
+  .select-items div,
+  .select-selected {
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    color: #000;
+    padding: 8px 16px;
+    cursor: pointer; }
+  .select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10; } }
 
 @media screen and (min-width: 1024px) {
   .peoplecard.grid {

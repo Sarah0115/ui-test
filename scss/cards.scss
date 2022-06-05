@@ -35,14 +35,21 @@ section {
         background-position: calc(100% - 3px) center;
     }
 }
+.container-se {
+    width: 173px;
+    height: 36px;
+}
+
+.custom-select {
+    display: none;
+}
+
 .peoplecard {
     display: flex;
     overflow-x: scroll;
     width: auto;
 }
 .card {
-    //background-color:rgb(122, 121, 119);
-
     height: 300px;
     min-width: 300px;
     width: 300px;
@@ -306,6 +313,45 @@ section {
                 }
             }
         }
+    }
+    .custom-select {
+        position: relative;
+        font-family: $titlefont;
+        width: 173px;
+        height: 36px;
+        display: block;
+        select,
+        .select-hide {
+            display: none;
+        }
+    }
+
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 5px solid black;
+        border-color: #000 transparent transparent transparent;
+    }
+
+    .select-items div,
+    .select-selected {
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    .select-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
     }
 }
 

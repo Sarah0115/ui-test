@@ -142,10 +142,13 @@
         <section>
           <div class="sectiontitle">
             <h2>Previous Rulings</h2>
-            <select id="styleview">
-              <option value="grid">Grid</option>
-              <option value="list">List</option>
-            </select>
+            <div class="custom-select" id="styleview">
+              <select>
+                <option value="0">Grid</option>
+                <option value="1">List</option>                
+              </select>
+            </div>
+                          
           </div>
           <div class="peoplecard grid"></div>
         </section>
@@ -222,6 +225,7 @@
       </footer>
     </div>
   </body>
+  <script src="./js/custom-select.js"></script>
   <script src="./js/listeners.js"></script>
   <script src="./js/main.js"></script>
 </html>

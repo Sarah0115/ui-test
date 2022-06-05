@@ -1,4 +1,5 @@
 const getData = async () => {
+  /* check if the data is on the localstore or calls the json file */
   if (!window.localStorage.getItem("jsonData")) {
     const response = await fetch("/assets/data.json");
     const data = await response.json();
@@ -10,16 +11,16 @@ const getData = async () => {
   }
 };
 
-//console.log(data);
 function setTime(dat) {
-  const datelast = dat.split("T");
-  const datea = datelast[0];
-  const dateago = datea.split("-");
+
+  const dateLast = dat.split("T");
+  const datea = dateLast[0];
+  const dateAgo = datea.split("-");
   const today = new Date();
-  const lastDay = new Date(dateago);
+  const lastDay = new Date(dateAgo);
   let timedif = today.getTime() - lastDay.getTime();
   let daydiff = timedif / (1000 * 3600 * 24);
-
+  /*  Checks the best unit to log the text */
   let time = "";
   if (daydiff / 365 > 1) {
     let year = Math.round(daydiff / 365);
@@ -39,7 +40,7 @@ function builtCard(person, index) {
 
   let posPercentage = ((person.votes.positive * 100) / totalvotes).toFixed(2);
   let negPercentage = ((person.votes.negative * 100) / totalvotes).toFixed(2);
-  const finalres = posPercentage > negPercentage ? "thumbsup" : "thumbsdown";
+  const finalRes = posPercentage > negPercentage ? "thumbsup" : "thumbsdown";
   const cardHTML = `<div class="card">
 <div class="card__picture" style="background-image: url('../assets/img/people/${
     person.picture
@@ -50,7 +51,7 @@ function builtCard(person, index) {
 <div class="card__content">
     
     <div class="card__info">
-        <div class="card__info__name ${finalres}"><span>${
+        <div class="card__info__name ${finalRes}"><span>${
     person.name
   }</span></div>
          <p class="card__info__description">${person.description}</p>
@@ -87,9 +88,8 @@ function builtCard(person, index) {
 `;
   return cardHTML;
 }
-
+/*  process  data and creates html */
 const aCards = (datos) => {
-  //console.log({datos})
   const cards = `
         ${datos
           .map((person, index) => {
@@ -100,9 +100,9 @@ const aCards = (datos) => {
   return cards;
 };
 
+/* init function */ 
 (async function () {
   const jsonData = await getData();
-  console.log(jsonData.data[1].votes);
   const finalHMTL = aCards(jsonData.data);
   document.querySelector(".peoplecard").innerHTML = finalHMTL;
   listeners(jsonData);
