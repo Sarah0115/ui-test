@@ -1,0 +1,22 @@
+{
+  "name": "sara",
+  "version": "1.0.0",
+  "description": "ui_test",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarah0115/ui-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarah0115/ui-test/issues"
+  },
+  "homepage": "https://github.com/Sarah0115/ui-test#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

@@ -1,0 +1,250 @@
+section {
+  margin: 20px 0; }
+
+.sectiontitle {
+  display: flex;
+  justify-content: space-between; }
+  .sectiontitle h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 20px; }
+  .sectiontitle select {
+    display: none;
+    width: 173px;
+    height: 36px;
+    border-radius: 0;
+    border: 1px solid black;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("../assets/img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3px) center; }
+
+.peoplecard {
+  display: flex;
+  overflow-x: scroll;
+  width: auto; }
+
+.card {
+  height: 300px;
+  min-width: 300px;
+  width: 300px;
+  position: relative;
+  margin-right: 10px;
+  display: flex; }
+  .card__picture {
+    background-image: url("../assets/img/people/kanye.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .card__content {
+    padding: 20px;
+    padding-left: 35px;
+    z-index: 5; }
+  .card__info__name {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    position: relative;
+    min-height: 70px;
+    display: flex;
+    align-items: flex-end; }
+    .card__info__name span {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; }
+    .card__info__name::before {
+      content: '';
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -32px;
+      bottom: 5px;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .card__info__name.thumbsup::before {
+      background-image: url("../assets/img/thumbs-up.svg");
+      background-color: #3CBBB4; }
+    .card__info__name.thumbsdown::before {
+      background-image: url("../assets/img/thumbs-down.svg");
+      background-color: #FBBD4A; }
+  .card__info__description {
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; }
+  .card__form {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start; }
+    .card__form__quickinfo {
+      color: white;
+      font-size: 12px;
+      text-align: right;
+      width: 100%; }
+      .card__form__quickinfo .thank {
+        display: block; }
+        .card__form__quickinfo .thank.hide {
+          display: none; }
+      .card__form__quickinfo .info {
+        display: block; }
+        .card__form__quickinfo .info.hide {
+          display: none; }
+  .card__votebox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .card__votebox.hide {
+      display: none; }
+  .card__votesubmit {
+    background-color: rgba(48, 48, 48, 0.6);
+    font-family: "Lato", sans-serif;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    height: 34px;
+    width: 105px;
+    font-size: 15px;
+    cursor: pointer; }
+    .card__votesubmit.disabled {
+      cursor: not-allowed;
+      background-color: rgba(0, 0, 0, 0.6) !important; }
+  .card__voteagain {
+    background-color: rgba(48, 48, 48, 0.6);
+    font-family: "Lato", sans-serif;
+    color: white;
+    border: 1px solid white;
+    height: 34px;
+    width: 107px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .card__voteagain.hide {
+      display: none; }
+  .card__vote {
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    cursor: pointer; }
+    .card__vote.yes {
+      background-color: #3CBBB4;
+      background-image: url(/assets/img/thumbs-up.svg); }
+    .card__vote.no {
+      background-color: #FBBD4A;
+      background-image: url(/assets/img/thumbs-down.svg); }
+    .card__vote.active {
+      border: 1px solid white; }
+  .card__gausebar {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 5; }
+    .card__gausebar > span {
+      color: white;
+      padding: 5px;
+      z-index: 2; }
+      .card__gausebar > span img {
+        padding: 0 5px; }
+    .card__gausebar .bar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex; }
+      .card__gausebar .bar .positive {
+        background-color: rgba(60, 187, 180, 0.6);
+        width: 50%;
+        height: 100%; }
+      .card__gausebar .bar .negative {
+        background-color: rgba(249, 173, 29, 0.6);
+        width: 50%;
+        height: 100%; }
+    .card__gausebar .data {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      z-index: 2; }
+      .card__gausebar .data .label {
+        padding: 5px; }
+      .card__gausebar .data img {
+        padding: 0 5px; }
+
+@media screen and (min-width: 768px) {
+  .sectiontitle select {
+    display: block; }
+  .peoplecard {
+    display: grid;
+    grid-gap: 20px;
+    overflow: hidden; }
+    .peoplecard.grid {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row; }
+      .peoplecard.grid .card {
+        margin-right: 0;
+        height: calc((100vw - 50px)/2);
+        display: flex;
+        align-items: center;
+        width: auto; }
+    .peoplecard.list {
+      grid-template-columns: 1fr; }
+      .peoplecard.list .card {
+        margin-right: 0;
+        height: 142px;
+        width: auto; }
+        .peoplecard.list .card__picture {
+          width: auto;
+          min-width: 142px;
+          height: 100%;
+          position: relative; }
+        .peoplecard.list .card__content {
+          padding: 5px;
+          display: flex;
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 18.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+          margin-left: -142px;
+          padding-left: 150px;
+          padding-right: 12px; }
+        .peoplecard.list .card__info__name {
+          font-size: 28px;
+          width: 100%;
+          min-height: 0;
+          position: initial; }
+          .peoplecard.list .card__info__name::before {
+            top: 0;
+            left: 0; }
+        .peoplecard.list .card__description {
+          font-size: 14px; }
+        .peoplecard.list .card__final {
+          top: 0; } }
+
+@media screen and (min-width: 1024px) {
+  .peoplecard.grid {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .peoplecard.grid .card {
+      height: calc(1060px / 3); }
+  .peoplecard.list .card__content {
+    padding-right: 14px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 14.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%); }
+  .peoplecard.list .card__info {
+    padding: 0 10px; } }
