@@ -1,4 +1,4 @@
-Zemoga Front End Development - Sara Prieto 
+Front End Development - Sara Prieto 
 ==================================================
 
 Hi! my name is Sara, and I am happy to share with you my test, I really enjoyed doing this from scratch. As some of you might already now( or realize), I dont have too much experience with framewoks, so I went smooth with vanilla JS. 
